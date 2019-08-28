@@ -21,11 +21,12 @@ return [
         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/hello', ['method' => 'post']],
     ],
-    '/' => 'admin/index/index',
+    '/' => 'admin/index/',
     'login' => 'admin/index/login',
     'insert'=>'admin/user/insert',
     'add'=>'admin/user/add',
     'doAdd'=>'admin/user/doAdd',
     'good'=>'good/index/index',
     'doRelatedAdd'=>'admin/index/add'
+
 ];
