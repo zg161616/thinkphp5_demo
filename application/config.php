@@ -140,6 +140,9 @@ return [
         'taglib_begin' => '{',
         // 标签库标签结束标记
         'taglib_end'   => '}',
+        'layout_on'     =>  true,
+        'layout_name'   =>  'layout',
+        'layout_item'   =>  '[__REPLACE__]'
     ],
 
     // 视图输出字符串内容替换
@@ -158,9 +161,9 @@ return [
     // 错误显示信息,非调试模式有效
     'error_message'          => '页面错误！请稍后再试～',
     // 显示错误信息
-    'show_error_msg'         => false,
+    'show_error_msg'         => true,
     // 异常处理handle类 留空使用 \think\exception\Handle
-    'exception_handle'       => '',
+    'exception_handle'       => '\app\api\exception\Http',
 
     // +----------------------------------------------------------------------
     // | 日志设置
@@ -172,7 +175,7 @@ return [
         // 日志保存目录
         'path'  => LOG_PATH,
         // 日志记录级别
-        'level' => [],
+        'level' => ['error','info'],
     ],
 
     // +----------------------------------------------------------------------
@@ -181,7 +184,7 @@ return [
     'app_trace' =>  true,
     'trace'                  => [
         // 内置Html Console 支持扩展
-        'type' => 'Html',
+        'type' => 'Console',
     ],
 
     // +----------------------------------------------------------------------

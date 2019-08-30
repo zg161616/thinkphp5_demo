@@ -12,6 +12,8 @@ use think\Url;
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 Route::rule('index/:name', 'admin/index');
+Route::rule(':version/user/:id','api/:version.User/read');
+Route::resource('blogs','index/blog');
 
 return [
     '__pattern__' => [
@@ -21,7 +23,7 @@ return [
         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/hello', ['method' => 'post']],
     ],
-    '/' => 'admin/index/',
+    '/' => 'admin/index/index',
     'login' => 'admin/index/login',
     'insert'=>'admin/user/insert',
     'add'=>'admin/user/add',

@@ -32,3 +32,14 @@ CREATE TABLE IF NOT EXISTS `think_book` (
   `user_id` int(6) UNSIGNED NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+#20190830
+CREATE TABLE IF NOT EXISTS `think_blog` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `name` char(40) NOT NULL DEFAULT '' COMMENT '标识',
+  `title` char(80) NOT NULL DEFAULT '' COMMENT '标题',
+  `content` text COMMENT '内容',
+  `create_time` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `update_time` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '更新时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '数据状态',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='博客表';
